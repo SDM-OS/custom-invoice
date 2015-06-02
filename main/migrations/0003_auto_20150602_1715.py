@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Attender',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, primary_key=True)),
                 ('name', models.CharField(max_length=150)),
                 ('phone', models.CharField(max_length=100)),
                 ('user', models.OneToOneField(to=settings.AUTH_USER_MODEL)),
@@ -25,7 +25,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Spare',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, primary_key=True)),
                 ('name', models.CharField(max_length=150)),
                 ('price', models.CharField(max_length=100)),
             ],
