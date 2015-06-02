@@ -33,8 +33,6 @@ class Job(models.Model):
 	attendee = models.ForeignKey(Attender)
 	model_no = models.CharField(max_length=100)
 	registration_no = models.CharField(max_length=200)
-	start_date = models.DateTimeField(default=None, blank=True)
-	end_date = models.DateTimeField(default=None, blank=True)
 	service_type = models.PositiveIntegerField(choices=SERVICE_TYPE, default=A)
 
 	def __unicode__(self):
