@@ -1,0 +1,46 @@
+<!doctype html lang="en">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Srisaimotors</title>
+	
+	<link href="/static/style.css" rel="stylesheet"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+
+	 <script type="text/javascript" src="/static/js/app.js"></script>
+           
+                    <script type="text/javascript" src="/static/js/controllers.js"></script>
+                    <script type="text/javascript" src="/static/js/services.js"></script>
+
+	<style>
+	body {
+		margin-top: 100px;
+	}
+	.banner {
+		text-align: center;
+	}
+	.owl {
+		max-width:100% !important;
+		height:auto;
+		display:block;
+	}
+	</style>
+</head>
+<body ng-app="unusual">
+
+	<div class='navbar fixed'>
+		<div class='container'>
+			<h4 class='pull-left'>Srisaimotors</h4>
+			<ul class='pull-right'>
+				<!-- <li><a href='/explore'>Create</a></li> -->
+				<li><a href='/about'>About</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	{% block content %}
+    {% endblock %}      
+	
+
+</body>
+</html>
