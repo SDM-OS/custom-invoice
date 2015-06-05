@@ -12,7 +12,7 @@ class Spare(models.Model):
 		return self.name
 
 
-class Lubes(models.Model):
+class Lube(models.Model):
 	name = models.CharField(max_length=150)
 	price = models.CharField(max_length=100)
 	count = models.PositiveIntegerField(default=0)
@@ -37,24 +37,23 @@ class Attender(models.Model):
 	def __unicode__(self):
 		return self.name
 
+
+class Service(models.Model):
+	name = models.CharField(max_length=200)
+
+	def __unicode__(self):
+		return self.name
+
+
 class Job(models.Model):
-	A = 0
-	B = 1
-	C = 2
-	SERVICE_TYPE = (
-		(A, "A"),
-		(B, "B"),
-		(C, "C"),
-	)
 
    	name = models.CharField(max_length=100)
 	address = models.TextField()
 	attendee = models.ForeignKey(Attender)
 	model_no = models.CharField(max_length=100)
 	registration_no = models.CharField(max_length=200)
-	start_date = models.DateTimeField(default=None, blank=True)
-	end_date = models.DateTimeField(default=None, blank=True)
-	service_type = models.PositiveIntegerField(choices=SERVICE_TYPE, default=A)
+	date = models.DateTimeField(default=None, blank=True)
+	service_type = models.ForeignKey(Service)
 
 	def __unicode__(self):
 		return self.name
