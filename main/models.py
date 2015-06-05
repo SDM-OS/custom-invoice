@@ -57,3 +57,10 @@ class Job(models.Model):
 
 	def __unicode__(self):
 		return self.name
+
+class Manager(models.Model):
+	user = models.ForeignKey(User)
+	name = models.CharField(max_length=150)
+
+	def __unicode__(self):
+		return self.name
