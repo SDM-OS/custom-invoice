@@ -6,12 +6,31 @@ from django.contrib.auth.models import User
 class Spare(models.Model):
 	name = models.CharField(max_length=150)
 	price = models.CharField(max_length=100)
+	count = models.PositiveIntegerField(default=0)
 
 	def __unicode__(self):
 		return self.name
 
+
+class Lubes(models.Model):
+	name = models.CharField(max_length=150)
+	price = models.CharField(max_length=100)
+	count = models.PositiveIntegerField(default=0)
+
+	def __unicode__(self):
+		return self.name
+
+
+class Npn(models.Model):
+	name = models.CharField(max_length=150)
+	price = models.CharField(max_length=100)
+	count = models.PositiveIntegerField(default=0)
+
+	def __unicode__(self):
+		return self.name
+
+
 class Attender(models.Model):
-	user = models.OneToOneField(User)
 	name = models.CharField(max_length=150)
 	phone = models.CharField(max_length=100)
 
