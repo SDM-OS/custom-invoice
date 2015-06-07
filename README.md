@@ -1,5 +1,5 @@
 # simple-invoice
- custom tool to maintain datasets for <a href="http://srisaimotors.com">Srisaimotors</a>
+ custom tool to manage datasets for <a href="http://srisaimotors.com">Srisaimotors</a>
 
 ## How to Run
 
