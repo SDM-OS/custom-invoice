@@ -14,6 +14,7 @@ api.register(main.api.AttenderResource())
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'main.views.home', name='home'),
+    url(r'^dashboard/', 'main.views.dashboard', name='dashboard'),
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^api/', include(api.urls)),

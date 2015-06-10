@@ -1,4 +1,4 @@
-function ACtrl($scope) {
+function TestCtrl($scope) {
 
-    $scope.khiladi = "kitta"
+    
 }
