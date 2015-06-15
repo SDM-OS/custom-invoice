@@ -1,5 +1,13 @@
 # simple-invoice
- custom tool to manage datasets for <a href="http://srisaimotors.com">Srisaimotors</a>
+
+# Todo
+
+ - <s>API's</s>
+ - <s>Angular-init</s>
+ - <s>rdash-dashboard</s>
+ - Nice-forms for dashboard
+ - <s>auth</s>
+ - reports and visualization stuff :D
 
 ## How to Run
 
