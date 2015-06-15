@@ -1,0 +1,41 @@
+{% extends "base_new.html" %}
+
+{% block content %}
+
+<div class="row">
+	<div class="col-lg-6 col-md-6 col-xs-12">
+		<input type="text" placeholder="Search jobs" class="form-control input-lg"> 
+	</div>
+	<div class="col-lg-3 col-md-6 col-xs-12">
+		<p>keho</p>
+	</div>
+	<div class="col-lg-3 col-md-6 col-xs-12">
+		<button class="btn btn-lg btn-success" href="/dashboard/add/">+Add new</button>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-lg-6">
+		<P>ond table doats</P>
+	</div>
+	<div class="col-lg-6">
+		<p>matte ond table</p>
+	</div>
+</div>
+
+<div class="row">
+		
+		<form  class="form-vertical" method="post"> {% csrf_token %}
+		<p>
+		 
+		{{ form.as_p }}
+
+		 
+		</p>
+		<input type="submit" class="btn btn-info" name="submit" value="Add New Contact">
+		</form>
+
+
+</div>
+
+{% endblock %}
