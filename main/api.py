@@ -26,5 +26,6 @@ class JobResource(ModelResource):
     class Meta:
         queryset = Job.objects.all()
         resource_name = 'job'
-        allowed_methods = ['post', 'get', 'delete']
+        detail_allowed_methods = ['put', 'post']
+        list_allowed_methods = ['get', 'post']
         always_return_data = True
