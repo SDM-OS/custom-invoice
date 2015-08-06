@@ -11,19 +11,6 @@ from django.views.generic.detail import DetailView
 def home(request):
 	return render(request, 'home.html')
 
-class AddjobView(FormView):
-	form_class = JobForm
-	success_url = "/"
-	template_name = 'new.html'
-
-	def form_valid(self, form):
-		form.save(commit = True)
-		return super(AddjobView, self).form_valid(form)
-
-
-def add(request):
-	return render(request, 'new.html')
-
 
 def logout(request):
     auth_logout(request)
