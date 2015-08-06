@@ -2,13 +2,12 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
 
-from main.api import JobResource, ServiceResource, AttenderResource
+from main.api import JobResource, AttenderResource
 from tastypie.api import Api
 import main.api
 
 api = Api(api_name='v1')
 api.register(main.api.JobResource())
-api.register(main.api.ServiceResource())
 api.register(main.api.AttenderResource())
 
 

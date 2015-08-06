@@ -12,16 +12,9 @@ class AttenderResource(ModelResource):
         resource_name = 'attender'
         allowed_methods = ['post', 'get']
 
-class ServiceResource(ModelResource):
-    class Meta:
-        queryset = Service.objects.all()
-        resource_name = 'service'
-        allowed_methods = ['post', 'get']
-
 
 class JobResource(ModelResource):
     attender = fields.ForeignKey('main.api.AttenderResource', 'attender', null=True)
-    service_type = fields.ForeignKey('main.api.ServiceResource', 'service_type', null=True)
 
     class Meta:
         queryset = Job.objects.all()

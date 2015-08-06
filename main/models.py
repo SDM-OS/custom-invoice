@@ -46,6 +46,16 @@ class Service(models.Model):
 
 
 class Job(models.Model):
+	"""Here For Each New task they call it as Job
+	"""
+	CLEANING = 0
+	WASHING = 1
+	SERVICING = 2
+	SERVICE_CHOICES = (
+    	(CLEANING, "Cleaning"),
+    	(WASHING, "Washing"),
+    	(SERVICING, "Servicing"),
+    )
 
    	name = models.CharField(max_length=100)
 	address = models.TextField()
@@ -53,7 +63,8 @@ class Job(models.Model):
 	model_no = models.CharField(max_length=100)
 	registration_no = models.CharField(max_length=200)
 	date = models.DateTimeField(default=None, blank=True)
-	service_type = models.ForeignKey(Service)
+	service_type = models.PositiveIntegerField(choices=SERVICE_CHOICES,
+                                                default=None)
 
 	def __unicode__(self):
 		return self.name
