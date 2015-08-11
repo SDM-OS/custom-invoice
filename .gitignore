@@ -60,3 +60,4 @@ target/
 db.sqlite3
 #mac shit
 .DS_Store
+invoice/static/bower_components/
