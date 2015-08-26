@@ -3,7 +3,7 @@ from tastypie import http, fields
 from tastypie.utils import trailing_slash
 from tastypie.exceptions import Unauthorized, ImmediateHttpResponse
 
-from main.models import Job, Attender, Service
+from main.models import Job, Attender
 
 
 class AttenderResource(ModelResource):

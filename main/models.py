@@ -38,13 +38,6 @@ class Attender(models.Model):
 		return self.name
 
 
-class Service(models.Model):
-	name = models.CharField(max_length=200)
-
-	def __unicode__(self):
-		return self.name
-
-
 class Job(models.Model):
 	"""Here For Each New task they call it as Job
 	"""
