@@ -10,15 +10,20 @@ class AttenderResource(ModelResource):
     class Meta:
         queryset = Attender.objects.all()
         resource_name = 'attender'
-        allowed_methods = ['post', 'get']
+        allowed_methods = ['post', 'get', 'put']
 
 
 class JobResource(ModelResource):
-    attender = fields.ForeignKey('main.api.AttenderResource', 'attender', null=True)
+    attender = fields.ForeignKey(AttenderResource,
+                                 'attender', null=True, full=True)
 
     class Meta:
         queryset = Job.objects.all()
         resource_name = 'job'
-        detail_allowed_methods = ['put', 'post']
+        detail_allowed_methods = ['put', 'post', 'get']
         list_allowed_methods = ['get', 'post']
         always_return_data = True
+
+
+    def dehydrate(self, bundle):
+        return bundle
